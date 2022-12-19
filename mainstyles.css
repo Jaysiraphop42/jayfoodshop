@@ -1,0 +1,62 @@
+.btn-primary{color:#ffff;background-color:#00b7ff;border-color:#00b7ff}
+.btn-cart{background-color:#ffff;}
+.btn-primary.focus,.btn-primary:focus{color:#fff;background-color:#286090;border-color:#122b40}
+.btn-primary:hover{color:#fff;background-color:#286090;border-color:#204d74}
+.btn-primary.active,.btn-primary:active,.open>.dropdown-toggle.btn-primary{color:#fff;background-color:#286090;background-image:none;border-color:#204d74}
+.btn-primary.active.focus,.btn-primary.active:focus,.btn-primary.active:hover,.btn-primary:active.focus,.btn-primary:active:focus,.btn-primary:active:hover,.open>.dropdown-toggle.btn-primary.focus,.open>.dropdown-toggle.btn-primary:focus,.open>.dropdown-toggle.btn-primary:hover{color:#fff;background-color:#204d74;border-color:#122b40}
+.btn-primary.disabled.focus,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled].focus,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:focus,fieldset[disabled] 
+.btn-primary:hover{background-color:#337ab7;border-color:#2e6da4}
+btn-primary .badge{color:#216fb3;background-color:#fff}
+
+.btn-danger{color:#fff;background-color:#ff0000;border-color:#ff0000}
+.btn-danger.focus,.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19}
+.btn-danger:hover{color:#fff;background-color:#c9302c;border-color:#ac2925}
+.btn-danger.active,.btn-danger:active,.open>.dropdown-toggle.btn-danger{color:#fff;background-color:#c9302c;background-image:none;border-color:#ac2925}
+.btn-danger.active.focus,.btn-danger.active:focus,.btn-danger.active:hover,.btn-danger:active.focus,
+.btn-danger:active:focus,.btn-danger:active:hover,.open>.dropdown-toggle.btn-danger.focus,.open>.dropdown-toggle.btn-danger:focus,.open>
+.dropdown-toggle.btn-danger:hover{color:#fff;background-color:#ac2925;border-color:#761c19}
+.btn-danger.disabled.focus,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled].focus,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] 
+.btn-danger.focus,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}
+
+.row{margin-right:-15px;margin-left:-15px}
+.navbar-inverse{background-color:rgb(255, 255, 255);
+    border-color:#ffff;
+    border-radius: 0px;
+    border-width: 3px;
+    }
+ .total-count{
+        position: absolute;
+        background-color:#ffa600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 19px;
+        width: 25px;
+        top: -10px;
+        left: 65px;
+        border-radius: 20px;
+    }
+.header_right{
+    position: absolute;
+    display: flex;
+    right:50px;
+    top: -20px;
+}
+.promppaylogo{
+    
+    position: relative;
+    display:flex;
+    left: 10px;
+   
+
+}
+.desprompay{
+    
+    position: relative;
+    display:flex;
+    left: -5px;
+   
+
+}
+.modal-footer{padding:25px;text-align:center;border-top:1px solid #e5e5e5}.modal-footer .btn+.btn{margin-bottom:0;margin-left:5px}.modal-footer .btn-group .btn+.btn{margin-left:-5px}.modal-footer .btn-block+.btn-block{margin-left:0}
