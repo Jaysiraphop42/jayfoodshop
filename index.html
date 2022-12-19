@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Menu order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="mainstyles.css">
+  
+      <style>
+          .navbar{
+              height: 60px;
+              line-height: 60px;
+              padding: 0 36px;
+          }
+      
+      </style>
+  </head>
+  <body>
+ 
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <span class="total-count"></span>
+         
+          <button type="button"  class="btn btn-cart" data-toggle="modal" data-target="#cart"><img src="image/shopping_cart_checkout_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button><button class="clear-cart btn btn-danger">Clear cart</button>
+        </div>
+    </div>
+ <div class="header_right">
+
+  <h2>เมนูอาหาร
+    <p>Food menu</p>
+  </h2>
+  
+  
+</div>
+</nav>
+
+
+<!-- Main -->
+<div class="container">
+  <div class="row">
+    <div class="col col-md-4">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="./image/1.jpeg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">ข้าวราดกระเพราหมูสับ</h4>
+          <p>Rice topped with stir-fried pork and basil.</p>
+          <p class="card-text">ราคา/Price: ฿65.00</p>
+          <a href="#" data-name="ข้าวราดกระเพราหมูสับ(Rice topped with stir-fried pork and basil)" data-price="65.00" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="./image/4.jpeg" alt="Card image cap">
+        <div class="card-block">
+           <h4 class="card-title">ข้าวราดกระเพรากุ้ง</h4>
+           <p>Rice topped with stir-fried shrimp and basil.</p>
+           
+            <p class="card-text">ราคา/Price: ฿70.00</p>
+            <a href="#" data-name="ข้่าวราดกระเพรากุ้ง(Rice topped with stir-fried shrimp and basil)" data-price="70.00" class="add-to-cart btn btn-primary text-white">Add to cart</a>
+          </div>
+        </div>
+     
+       <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="./image/cocacola.jpeg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">น้ำอัดลม</h4>
+          <p>Coca cola</p>
+          <p class="card-text">ราคา/Price: ฿15.00</p>
+          <a href="#" data-name="น้ำอัดลม(cocacola)" data-price="15.00" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+      </div>
+    </div>
+      <div class="col col-md-4">
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="./image/2.jpeg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">ข้าวราดกระเพราไก่</h4>
+            <p>Rice topped with stir-fried chicken and basil.</p>
+            <p class="card-text">ราคา/Price: ฿60.00</p>
+            <a href="#" data-name="ข้าวราดกระเพราไก่(Rice topped with stir-fried chicken and basil)" data-price="60.00" class="add-to-cart btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="./image/5.jpeg" alt="Card image cap">
+          <div class="card-block">
+             <h4 class="card-title">ข้าวผัดหมู</h4>
+             <p>Fried rice with pork</p>
+             <br>
+              <p class="card-text">ราคา/Price: ฿55.00</p>
+
+              <a href="#" data-name="ข้าวผัดหมู(fried rice with pork)" data-price="55.00" class="add-to-cart btn btn-primary text-white">Add to cart</a>
+            </div>
+          </div>
+         
+         <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="./image/น้ำเปล่า.jpeg" alt="Card image cap">
+          <div class="card-block">
+             <h4 class="card-title">น้ำเปล่า</h4>
+             <p>water</p>
+             <br>
+              <p class="card-text">ราคา/Price: ฿8.50</p>
+
+              <a href="#" data-name="น้ำเปล่า(water)" data-price="8.50" class="add-to-cart btn btn-primary text-white">Add to cart</a>
+            </div>
+          </div>
+         </div>
+
+         <div class="col col-md-4">
+          <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="./image/3.jpeg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">ข้าวราดกระเพราเนื้อ</h4>
+              <p>Rice topped with stir-fried meat and basil.</p>
+              <p class="card-text">ราคา/Price: ฿70.00</p>
+              <a href="#" data-name="ข้าวราดกระเพราเนื้อ(Rice topped with stir-fried meat and basil)" data-price="70.00" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="./image/6.jpeg" alt="Card image cap">
+            <div class="card-block">
+               <h4 class="card-title">ข้าวผัดไข่</h4>
+               <p>Fried rice with egg</p>
+               <br>
+                <p class="card-text">ราคา/Price: ฿50.00</p>
+                <a href="#" data-name="ข้าวผัดไข่(fried rice with egg)" data-price="50.00" class="add-to-cart btn btn-primary text-white">Add to cart</a>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="./image/ice.jpeg" alt="Card image cap">
+              <div class="card-block">
+                 <h4 class="card-title">น้ำแข็ง</h4>
+                 <p>ice</p>
+                 <br>
+                  <p class="card-text">ราคา/Price: ฿2.25</p>
+    
+                  <a href="#" data-name="น้ำแข็ง(ice)" data-price="2.25" class="add-to-cart btn btn-primary text-white">Add to cart</a>
+                </div>
+              </div>
+             </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: ฿<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="index1.html">
+        <button type="button" class="btn btn-primary">Order now</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ 
+      
+ 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="./js/script.js"></script>
+     
+  </body>
+</html>

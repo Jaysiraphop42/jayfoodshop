@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mainstyles.css">
+    <script src="js/prompayQR.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">payment process</h5>
+              
+                
+             
+            </div>
+            <div class="modal-body">
+              <div>Total price: ฿<span class="total-cart" type="number"></span></div>
+            </div>
+            <div class="modal-footer">
+            
+             <p class="desprompay">กรุณาสแกน promtPay QR code 
+              ที่ปรากฎอยู่บนหน้าจอเพื่อทำการชำระเงิน</p>
+             <p class="desprompay">Please scan the promptPay QR code 
+              that appears on the screen to make payment.</p>
+             <p><img class="promppaylogo" src="image/prompay.jpg" alt="prompaylogo" style="width: 20rem;"></p>
+             <div id="qrcode" style="text-align: center; margin: auto;"></div>
+
+              
+              </a>
+            </div>
+          </div>
+        </div>
+      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="./js/script.js"></script>
+    <script type="text/javascript">
+      
+      // get QR-dom
+      var qr_dom = document.getElementById('qrcode');
+      
+
+      // render QR function
+      function render_qr(){
+        var totalCart = shoppingCart.totalCart();
+        //var totalCart = document.getElementsByClassName('totalCart').value;
+        var txt = PromptPayQR.gen_text("0928941908", totalCart);
+
+        qr_dom.innerHTML = "";
+        if(txt){
+          new QRCode(qr_dom, txt);
+        }
+      }
+
+      // download function
+      // https://stackoverflow.com/a/46406124/466693
+      function dataURItoBlob(dataURI) {
+        // convert base64 to raw binary data held in a string
+        // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+        var byteString = atob(dataURI.split(',')[1]);
+
+        // separate out the mime component
+        var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+        // write the bytes of the string to an ArrayBuffer
+        var ab = new ArrayBuffer(byteString.length);
+
+        // create a view into the buffer
+        var ia = new Uint8Array(ab);
+
+        // set the bytes of the buffer to the correct values
+        for (var i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+
+        // write the ArrayBuffer to a blob, and you're done
+        var blob = new Blob([ab], {type: mimeString});
+        return blob;
+
+      }
+      function download() {
+        // find b64
+        let b64 = document.getElementsByTagName('img')[0].src;
+        if (!b64) b64 = document.getElementsByTagName('canvas')[0].toDataURL();
+        if (!b64) {
+          alert("Cannot find QR Image");
+          return;
+        }
+        // build blob
+        let blob = dataURItoBlob(b64);
+        // download image
+        saveAs(blob, "download.png");
+      }
+
+      // bind acc_id, amount, download
+      //document.getElementById('acc_id').addEventListener('keyup', render_qr, true);
+      //document.getElementById('amount').addEventListener('keyup', render_qr, true);
+
+      // preview qr
+      render_qr();
+
+    </script>
+</body>
+</html>
